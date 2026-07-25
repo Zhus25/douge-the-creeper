@@ -12,9 +12,12 @@ point_count = 5
 
 [node name="main" type="Node" unique_id=696177172]
 script = ExtResource("1_h2yge")
+mob_scene = ExtResource("3_lquwl")
 
 [node name="Player" parent="." unique_id=2082371110 instance=ExtResource("2_1bvp3")]
 position = Vector2(1, 0)
+
+[node name="Mob" parent="." unique_id=120932325 instance=ExtResource("3_lquwl")]
 
 [node name="MobTimer" type="Timer" parent="." unique_id=229954657]
 wait_time = 0.5
@@ -28,12 +31,10 @@ one_shot = true
 [node name="StartPosition" type="Marker2D" parent="." unique_id=1818343917]
 position = Vector2(240, 450)
 
-[node name="Main Mobpath" type="Path2D" parent="." unique_id=1625244877]
+[node name="MobPath" type="Path2D" parent="." unique_id=1625244877]
 curve = SubResource("Curve2D_7mycd")
 
-[node name="MobSpawnLocation" type="PathFollow2D" parent="Main Mobpath" unique_id=120543005]
-
-[node name="Mob" parent="." unique_id=438594558 instance=ExtResource("3_lquwl")]
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=120543005]
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

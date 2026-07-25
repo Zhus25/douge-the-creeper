@@ -37,17 +37,13 @@ height = 139.5
 
 [node name="player" type="Area2D" unique_id=2082371110]
 script = ExtResource("1_sweqy")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1800037793]
-position = Vector2(67.5, 57.125)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_n7ghd")
 animation = &"up"
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2132097187]
-position = Vector2(67.5, 57.125)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_nvl01")
 
